@@ -1,0 +1,31 @@
+TẠO ELEMENT
+XOÁ ELEMENT
+ẨN ELEMENT
+EVENT DOM (BAO GỒM CÁC CÁCH CALL EVENT)
+BIẾN ĐỔI CSS
+THÊM ELEMENT
+1. EVENT DOM
+CÁCH VIẾT NTN
+Cách 1 - onevent : 
+<button onlick="cach1()"> click me</button> #thẻ này chỉ là demo thôi, ngoài ra có thể gắn event trên nhiều thẻ khác nhau
+
+function cach1() {
+  console.log("test")
+}
+Cách 2 - onevent without function name
+<button id="test_id"> click me</button> #thẻ này chỉ là demo thôi, ngoài ra có thể gắn event trên nhiều thẻ khác nhau
+document.querySelector('#test_id').onclick = function () {
+console.log("test")
+}
+
+
+
+GỒM NHỮNG LOẠI EVENT NÀO
+1. ONLICK
+2. KEYCODE
+3. ONCHANGE
+
+BONUS & LƯU Ý :
+- ONCLICK NÊN SỬ DỤNG VỚI CÁCH TRƯỜNG HỢP CÓ NÚT BUTTON
+- ONCHANGE SỬ DỤNG VỚI CÁC THẺ VALUE  (EVENT ĐƯỢC THỰC HIỆN KHI VALUE THAY ĐỔI VÀ THƯỜNG DÙNG VỚI BUTTON)
+- ONINPUT SỬ DỤNG VỚI CÁC THẺ VALUE KHI THAY ĐỔI LIÊN TỤC  

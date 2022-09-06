@@ -1,0 +1,56 @@
+---------------------------------------------------------------------------------------------------------------
+I: With CSS SELECTOR
+A. 1 SỐ KIẾN THỨC CẦN NẮM
+GỒM NHỮNG CÁCH GET NÀO
+1. getElementBy
+document.getElementById('Id') //Không cần # trước Id & nhớ là element số ít
+document.getElementsByClassName('Classname') //Không cần . trước classname & nhớ là elements số nhiều
+document.getElementsByClassName('Classname') //Không cần . trước classname & nhớ là elements số nhiều
+=> Còn lại Name , Tag name y chang Class name (cũng là elements số nhiều)
+=> Cách này học cho biết thôi nhưng lấy bằng CSS Selector quan trọng hơn nên sẽ ghi rõ hơn ở dưới
+------------------------- 
+2. CSS Selector
+--------GỒM NHỮNG CÁCH GET NÀO--------
+document.querySelector('') // Lấy chỉ 1 element đầu tiên hợp lệ
+document.querySelector('') // Lấy nguyên list có các element hợp lệ
+-------GET LÀ GET NHỮNG GÌ---------
+1. ID
+document.querySelector("#id") //Nhớ là nếu lấy id thì điền # trước id
+2. Class
+document.querySelector("#class") //Nhớ là nếu lấy id thì điền # trước id
+=> Để ý class mà có trong trẳng ở trong thẻ thì xoả dấu space đó đổi thành lại dấu . 
+ví dụ : 
+class="div1 div2 div3" => đổi thành .div1.div2.div3
+3. tagname
+document.querySelector("tagname") //Lấy là lấy mấy thẻ div , p , span rồi kết hợp với class hay child element đồ cho chính xác
+4. Attribute
+document.querySelector("tagname[attribute]") //Thẻ attribute cố định thường là mấy thẻ lạ lạ nằm cùng hàng như type="tel" , name="abc" , placeholder="abc" v.v... và trước attribue phải là tagname)
+ví dụ : 
+document.querySelector("div[type='text']")
+5. child element (đọc là hiểu nó nằm theo thứ tự từ element lớn > element con trong nó)
+document.querySelector("thẻ_bất_kì1 > thẻ_bất_kì2") // Tức là mỗi thẻ phải cách nhau dấu space hoặc dấu " > " ()
+ví dụ : 
+document.querySelector(".input > div[type='text']")
+6. get từng bước
+A = document.querySelector(".class")
+B = A.querySelector(".class2")
+-------- SAU KHI GET XONG THÌ LÀM GÌ NỮA ? -------------------
+1. CLick
+.click()
+2. Lấy Value hoặc biến đổi value (send_key)
+.value
+.value = "new_value"
+3. Get text
+.textContent
+.innerHTML
+.innerText
+.....
+---------------------------------------------------
+ BONUS & LƯU Ý:
+ - TRÊN F12 ẤN ELEMENT CẦN LẤY SAU ĐÓ ẤN COPY JS PATCH (GIỐNG LẤY XPATH)
+ - Class mà thấy khoảng trắng là thay bằng dấu.
+ - lấy element con thì để dấu space ở giữa hoặc space_>_space
+ - auto select drop box thì dùng .value
+ - check box & radio box thì dùng .click()
+ 
+

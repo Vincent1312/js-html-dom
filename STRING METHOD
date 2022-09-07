@@ -1,0 +1,95 @@
+// // ==================== CÁC STRING METHOD BẮT BUỘC BIẾT TRONG JAV SCRIPT (MÌNH SẼ DÙNG FUNCTION ĐỂ BIỂU DIỄN)=============================
+
+// 1. uppercase (Viết hoa các chữ trong string - giống title trong python) 
+function uppercase_method(string) {
+	return string.toUpperCase()
+}
+console.log(uppercase_method("goc san deal")) //Out put : GOC SAN DEAL
+//===============================================================================
+// 2. lower case (Viết thường các chữ trong string - ngược lại uppercase) 
+function lowercase_method(string) {
+	return string.toLowerCase()
+}
+console.log(lowercase_method("GOC San deal")) //Out put : goc san deal
+//===============================================================================
+//3. Split (Tách string thành list)
+function split_method(string) {
+	return string.split("/")
+}
+console.log(split_method("Goc/San/Deal")) //Out put : GOC SAN DEAL ['Goc','San','Deal']
+//===============================================================================
+//4. incluse (Nó giống if "string" in list hoặc string ở python)
+// case 1 - check if "string" has in list
+my_list = ["Goc","San","Deal"]
+keyword_to_check = "San"
+if (my_list.includes(keyword_to_check)) {
+	console.log(`${keyword_to_check} có trong list`)	
+}
+else {
+	console.log("Không tìm thấy")
+}
+//----------------
+// Case 2 - Check if "string" has in string
+my_string = "Goc San Deal"
+keyword_to_check = "San"
+if (my_string.includes(keyword_to_check)) {
+	console.log(`${keyword_to_check} có trong String`)	
+}
+else {
+	console.log("Không tìm thấy")
+}
+//===============================================================================
+// 5. join (chuyển list thành string)
+
+function join_method(my_list) {
+	return my_list.join(" ")
+}
+console.log(join_method(["GOC","SAN","DEAL"])) //OUT PUT : GOC SAN DEAL
+//===============================================================================
+// 6. indexOf() (Trả về vị trí của "CHỮ SỐ" trong string - giống method find bên python)
+
+function indexof_method(string) {
+	return string.indexOf("c")
+
+}
+console.log(indexof_method("Góc săn deal")) //Out put : 2 (nếu ko tìm thấy thì nó sẽ trả về -1 như python)
+//===============================================================================
+//7. replace & replace all (giống y chang bên python nhưng mà bên này có thêm replace all)
+
+function replace_method(string) {
+	return string.replace("deal","sale")
+}
+console.log(replace_method("Góc săn deal"))
+//===============================================================================
+//8. replace & replace all (giống y chang bên python nhưng mà bên này có thêm replace all)
+
+// function replaceall_method(string1) {
+// 	return string1.replaceAll("deal","sale");
+// }
+
+// console.log(replaceall_method("Góc săn deal - trang chuyên săn deal xịn nhất vn")) // Out put : Góc săn sale - trang chuyên săn sale xịn nhất vn ==> NHỚ LÀ NÀY KO CHẠY TRÊN CMD DC , CHỈ CHẠY TRÊN F12
+//===============================================================================
+//9. trim() (giống strip() bên python -  loại bỏ khoảng trắng 2 bên trái phải)
+
+function trim_method(string) {
+	return string.trim()
+}
+console.log(trim_method("   Góc săn deal    "))  //Out Put : Góc săn deal
+//===============================================================================
+//10. slice (tách chuỗi - giống string[0:3] bên python mà rườm rà hơn :v )
+// case 1
+string1= "Góc săn deal"
+console.log(string1.slice(0,3)) //Out put :  Góc
+//-----
+// case 2
+string1= "Góc săn deal"
+console.log(string1.slice(-4)) //Out put :  deal (nếu muốn lấy từ sau ra trước thì gõ 1 con số âm thui là được)
+// case 3 
+//-----
+// cách 1 : 
+string1= "Góc săn deal"
+console.log(string1[string1.length -1]) // Out put : l
+// cách 2 : 
+string1= "Góc săn deal"
+console.log(string1.slice(-1)) // Out put : l
+//11 . substring (đang tìm hiểu)

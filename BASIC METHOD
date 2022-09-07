@@ -1,0 +1,38 @@
+// =======================MỘT SỐ LIST METHOD CẦN NẮM TRONG JAV SCRIPT====================================
+
+//1. SORT (GIỐNG HÀM SORT BÊN PYTHON)
+// SORT TỪ BÉ ĐẾN LỚN
+mylist = [1,4,2,3]
+console.log(mylist.sort((a,b) => a - b)) //Out put : [ 1, 2, 3, 4 ]
+// ------------
+// SORT TỪ LỚN ĐẾN BÉ
+mylist = [1,4,2,3]
+console.log(mylist.sort((a,b) => b - a)) //Out put : [ 4, 3, 2, 1 ]
+//===============================================================================
+//2. REVERSE (ĐẢO NGƯỢC - GIỐNG HÀM REVERSE BÊN PYTHON)
+mylist = ["GOC","SAN","DEAL"]
+console.log(mylist.reverse()) // Out put : [ 'DEAL', 'SAN', 'GOC' ]
+//===============================================================================
+//3. POP (XOÁ PHẦN TỬ CUỐI CỦA LIST - GIỐNG POP BÊN PYTHON)
+mylist = ["GOC","SAN","DEAL"]
+mylist.pop()
+console.log(mylist) //OUT PUT : [ 'GOC', 'SAN' ]
+//4. PUSH (GIỐNG APPEND BÊN PYTHON)
+
+mylist = ["GOC","SAN","DEAL"]
+mylist.push("NÈ")
+console.log(mylist) //OUT PUT : [ 'GOC', 'SAN', 'DEAL', 'NÈ' ]
+
+
+
+// BONUS 1 SỐ METHOD THÊM STRONG JS
+//A. CLEAR LIST IN PYTHON (ĐÁNG LẼ CÓ HÀM CLEAR GIỐNG BÊN PYTHON NHƯNG JS KHÔNG CÓ CHO NÊN LÀM THEO NÈ)
+
+mylist = ["GOC","SAN","DEAL"]
+mylist.length = 0 ;
+console.log(mylist) //OUT PUT : []
+
+// B. REMOVE SPECIFY ELEMENT IN PYTHON (ĐÁNG LẼ CÓ HÀM CLEAR GIỐNG BÊN PYTHON NHƯNG JS KHÔNG CÓ CHO NÊN LÀM THEO NÈ)
+array=["GOC","SAN","DEAL"]
+newArray = array.filter((value)=>value!='GOC');
+console.log(newArray)

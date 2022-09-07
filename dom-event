@@ -4,28 +4,79 @@ XOÁ ELEMENT
 EVENT DOM (BAO GỒM CÁC CÁCH CALL EVENT)
 BIẾN ĐỔI CSS
 THÊM ELEMENT
-1. EVENT DOM
-CÁCH VIẾT NTN
-Cách 1 - onevent : 
+=======================================================================================
+1. --------------DON EVENT----------------
+CÁCH VIẾT NHƯ THẾ NÀO?
+CÁCH 1 : ONEVENT WITH FUNCTION NAME
 <button onlick="cach1()"> click me</button> #thẻ này chỉ là demo thôi, ngoài ra có thể gắn event trên nhiều thẻ khác nhau
 
 function cach1() {
   console.log("test")
 }
-Cách 2 - onevent without function name
-<button id="test_id"> click me</button> #thẻ này chỉ là demo thôi, ngoài ra có thể gắn event trên nhiều thẻ khác nhau
+----
+CÁCH 2 : ONEVENT WITHOUT FUNCTION NAME
+<button id="test_id"> click me</button> 
 document.querySelector('#test_id').onclick = function () {
 console.log("test")
 }
+---
+CÁCH 3 : EVENTLISTENER
+<button id="test_id"> click me</button>
+document.querySelector('#test_id').addEventListener('click',function () {
+console.log("test")
+})
+-----------------------------------------------------------------
+GỒM NHỮNG LOẠI EVENT THÔNG DỤNG NÀO
+<input type="number" name="input_value" value=1>
+	<button id="test_id">Click me</button> </br>
+	<p id="p1">Test on input<p>
+	<p id="p2">Test on keyup<p>
+	<p id="p3">Test on mouser over<p>
+	<p id="p4">Test keypress<p>
 
-
-
-GỒM NHỮNG LOẠI EVENT NÀO
 1. ONLICK
-2. KEYCODE
-3. ONCHANGE
+// ON CLICK EVENT
+	document.querySelector('#test_id').addEventListener('change',function () {
+		let input_value = document.querySelector('input[name="input_value"]').value;
+		alert(`Kết quả on click là ${input_value}`)
+}) 
+2. ONCHANGE
+document.querySelector('input[name="input_value"]').addEventListener('change',function () {
+		let input_value = document.querySelector('input[name="input_value"]').value;
+		alert(`Kết quả on click là ${input_value}`)
+})
+3. KEYUP & KEYDOWN
+CÁCH 1 : 
+document.querySelector('input[name="input_value"]').addEventListener('keydown',function () {
+		let input_value = document.querySelector('input[name="input_value"]').value;
+		document.querySelector("#p2").innerText = "Test on keyup/keydown " + input_value;
+		
+})
+CÁCH 2 : KẾT HỢP KEYCODE
+document.querySelector('input[name="input_value"]').addEventListener('keydown',function (event) { 
+    if (event.keyCode ==65 || event.key == "a") {alert("key code là " + event.key)} 
+    })
+=> Xem list keycode ở ên dưới
+4. MOUSEOVER & MOUSEOUT
+document.querySelector('input[name="input_value"]').addEventListener('mouseover',function () {
+		let input_value = document.querySelector('input[name="input_value"]').value;
+		document.querySelector("#p3").innerText = "Test on mouser over " + input_value;
+		
+})
+5. ONINPUT
+document.querySelector('input[name="input_value"]').addEventListener('input',function () {
+		let input_value = document.querySelector('input[name="input_value"]').value;
+		document.querySelector("#p1").innerText = "Test on input " + input_value;
+		
+})
 
+
+
+TẠO ELEMENT
+==============================================================================================
 BONUS & LƯU Ý :
 - ONCLICK NÊN SỬ DỤNG VỚI CÁCH TRƯỜNG HỢP CÓ NÚT BUTTON
 - ONCHANGE SỬ DỤNG VỚI CÁC THẺ VALUE  (EVENT ĐƯỢC THỰC HIỆN KHI VALUE THAY ĐỔI VÀ THƯỜNG DÙNG VỚI BUTTON)
 - ONINPUT SỬ DỤNG VỚI CÁC THẺ VALUE KHI THAY ĐỔI LIÊN TỤC  
+- ON KEYUP & KEYDOWN Y CHANG ON INPUT (CÓ ĐIỀU KHI NHẢ PHÍM RA NÓ MỚI THỰC HIỆN) => NÊN SỬ DỤNG KEYDOWN VÀ KẾT HỢP KEYCODE
+- FULL LIST KEYCODE : https://www.freecodecamp.org/news/javascript-keycode-list-keypress-event-key-codes/

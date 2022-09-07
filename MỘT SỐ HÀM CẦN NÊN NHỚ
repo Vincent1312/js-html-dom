@@ -1,0 +1,11 @@
+1. //RANDOM IN LIST
+// var items = ["hello", "alo","cc"];
+// a = items[Math.floor(Math.random()*items.length)]
+// console.log(a)
+
+
+//RANDOM INT 1-10
+// a = Math.floor(Math.random() * 10);
+// console.log(a)
+=====================================================
+2. // ĐANG UPDATE THÊM (REGREX)

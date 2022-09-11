@@ -24,7 +24,7 @@ class="div1 div2 div3" => đổi thành .div1.div2.div3
 3. tagname
 document.querySelector("tagname") //Lấy là lấy mấy thẻ div , p , span rồi kết hợp với class hay child element đồ cho chính xác
 4. Attribute
-document.querySelector("tagname[attribute]") //Thẻ attribute cố định thường là mấy thẻ lạ lạ nằm cùng hàng như type="tel" , name="abc" , placeholder="abc" v.v... và trước attribue phải là tagname)
+document.querySelector("tagname[attribute]") //Thẻ attribute cố định thường nằm cùng hàng như class = "abc" , type="tel" , name="abc" , placeholder="abc" v.v... và trước attribue phải là tagname)
 ví dụ : 
 document.querySelector("div[type='text']")
 5. child element (đọc là hiểu nó nằm theo thứ tự từ element lớn > element con trong nó ) => nhớ là child là không cùng nằm trên 1 element
@@ -52,5 +52,7 @@ B = A.querySelector(".class2")
  - lấy element con thì để dấu space ở giữa hoặc space_>_space
  - auto select drop box thì dùng .value
  - check box & radio box thì dùng .click()
+ - lấy element bằng attribute thì lấy rẻ tagname sau đó thuộc tính (cùng hàng của thẻ tagname đó) // ví dụ document.querySelector('h1[class="abc"]') trong đó h1 và class nằm trùng trên 1 hàng
+ - còn lấy child tức là lấy thẻ lớn > thẻ bé (không nằm cùng hàng mà đi từ ngoài vào trong) // ví dụ document.querySelector('.title1 > .title2') trong đó class title1 và class title2 nằm khác hàng
  
 

@@ -69,14 +69,37 @@ document.querySelector('input[name="input_value"]').addEventListener('input',fun
 		document.querySelector("#p1").innerText = "Test on input " + input_value;
 		
 })
-
-
-
-TẠO ELEMENT
+2------------ BIẾN ĐỔI CSS ------------------
+-----CÁC LOẠI CSS THÔNG DỤNG
+--- lưu ý : css trong js sẽ biến đổi theo dạng quy chuẩn : ví dụ font-size đưa vào css sẽ thành -> fontSIze
+1. font-size : "sizepx" 
+ví dụ : fontSize = "40px"
+2. color: "red"
+3. background-color : "red"
+ví dụ :
+backgroundColor = "blue"
+4. width : "sizepx"
+ví dụ :
+width = "100px"
+5. height : "sizepx"
+ví dụ :
+height = "100px"
+.....
+---------ÁP DỤNG VÀO CSS NHƯ THẾ NÀO?---------
+document.querySelector('abc').style."thuoctinh" = "something"
+ví dụ
+document.querySelector('abc').style.width = "200px"
 ==============================================================================================
 BONUS & LƯU Ý :
+---- VỀ DOM EVENT----
 - ONCLICK NÊN SỬ DỤNG VỚI CÁCH TRƯỜNG HỢP CÓ NÚT BUTTON
 - ONCHANGE SỬ DỤNG VỚI CÁC THẺ VALUE  (EVENT ĐƯỢC THỰC HIỆN KHI VALUE THAY ĐỔI VÀ THƯỜNG DÙNG VỚI BUTTON)
 - ONINPUT SỬ DỤNG VỚI CÁC THẺ VALUE KHI THAY ĐỔI LIÊN TỤC  
 - ON KEYUP & KEYDOWN Y CHANG ON INPUT (CÓ ĐIỀU KHI NHẢ PHÍM RA NÓ MỚI THỰC HIỆN) => NÊN SỬ DỤNG KEYDOWN VÀ KẾT HỢP KEYCODE
 - FULL LIST KEYCODE : https://www.freecodecamp.org/news/javascript-keycode-list-keypress-event-key-codes/
+---- VỀ BIẾN ĐỔI CSS-
+=> Lưu ý :
+khi biến đổi style = css thì lấy nguyên cụm element của nó biến đổi luôn chứ không phải lấy thuộc tính bên trong đó
+--ví dụ
+document.querySelector('abc').style.width = "200px" => đúng
+document.querySelector('abc').innerText.style.width = "200px" => sai

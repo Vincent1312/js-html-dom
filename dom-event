@@ -1,9 +1,6 @@
-TẠO ELEMENT
-XOÁ ELEMENT
-ẨN ELEMENT
+TẠO ELEMENT - ADD ELEMENT - REMOVE ELEMENT
 EVENT DOM (BAO GỒM CÁC CÁCH CALL EVENT)
 BIẾN ĐỔI CSS
-THÊM ELEMENT
 =======================================================================================
 1. --------------DON EVENT----------------
 CÁCH VIẾT NHƯ THẾ NÀO?
@@ -72,23 +69,53 @@ document.querySelector('input[name="input_value"]').addEventListener('input',fun
 2------------ BIẾN ĐỔI CSS ------------------
 -----CÁC LOẠI CSS THÔNG DỤNG
 --- lưu ý : css trong js sẽ biến đổi theo dạng quy chuẩn : ví dụ font-size đưa vào css sẽ thành -> fontSIze
-1. font-size : "sizepx" 
-ví dụ : fontSize = "40px"
+1. font-size : "40px" 
+ví dụ trong js : element_can_gan.style.fontSize = "40px"
 2. color: "red"
 3. background-color : "red"
-ví dụ :
-backgroundColor = "blue"
+ví dụ trong js : element_can_gan.style.backgroundColor = "blue"
 4. width : "sizepx"
-ví dụ :
-width = "100px"
+ví dụ trong js : element_can_gan.style.width = "100px"
 5. height : "sizepx"
-ví dụ :
-height = "100px"
-.....
----------ÁP DỤNG VÀO CSS NHƯ THẾ NÀO?---------
+ví dụ trong js : element_can_gan.style.height = "100px"
+6. border  = "1px solid red"
+7. display = "None"
+8. set chữ đậm, nhạt, nghiêng
+font-weight : "something" (bold,italic,500....)
+ví dụ trong js : element_can_gan.style.fontWeight = "100"
+9. margin 
++ margin-top : "10px"
+ví dụ trong js : element_can_gan.style.marginTop = "10px
++ margin-left : "10px"
++ mesgin-bottom : "10px" 
++ bottom-right = "10px"
+hoặc
+margin : "pxtop pxleft pxbottom px right" (ví dụ margin : "10px 0 10px 0" )
+10. padding (như margin nhưng đang tìm hiểu)
+---------ÁP DỤNG VÀO CSS NHƯ THẾ NÀO?
 document.querySelector('abc').style."thuoctinh" = "something"
 ví dụ
 document.querySelector('abc').style.width = "200px"
+3---------------- TẠO ELEMENT - ADD ELEMENT - REMOVE ELEMENT
+3.1 TẠO ELEMENT
+--CÚ PHÁP TẠO ELEMENT
+document.createElement("ten_the")
+ví dụ :
+newElement = document.createElement("button")
+=> từ đây có thể thêm style css như bình thường
+---------Bonus : cách thêm classname và id vào 
+THÊM CLASS NAME VÀ ID
+newElement.className = "new_classname"
+newElement.id = "new_classname"
+REMOVE CLASSNAME VÀ ID
+newElement.removeAttribute('id')
+newElement.classList.remove('classname_toremove')
+--CÚ PHÁP THÊM PHẦN TỪ VÀO ELEMENT
+ten_element_canthem.appendChild("ten_phantu_canthem")
+ví dụ : 
+ten_element_canthem.appendChild("newElement")
+-- CÚ PHÁP REMOVE ELEMENT
+newElement.remove()
 ==============================================================================================
 BONUS & LƯU Ý :
 ---- VỀ DOM EVENT----
@@ -99,7 +126,9 @@ BONUS & LƯU Ý :
 - FULL LIST KEYCODE : https://www.freecodecamp.org/news/javascript-keycode-list-keypress-event-key-codes/
 ---- VỀ BIẾN ĐỔI CSS-
 => Lưu ý :
-khi biến đổi style = css thì lấy nguyên cụm element của nó biến đổi luôn chứ không phải lấy thuộc tính bên trong đó
---ví dụ
+- khi biến đổi style = css thì lấy nguyên cụm element của nó biến đổi luôn chứ không phải lấy thuộc tính bên trong đó
+ví dụ
 document.querySelector('abc').style.width = "200px" => đúng
 document.querySelector('abc').innerText.style.width = "200px" => sai
+- khi mà không set được width với height thì NHỚ chỉnh cái display = "inline-block" => thì sẽ chỉnh đc cái width với height nha
+

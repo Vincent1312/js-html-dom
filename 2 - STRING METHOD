@@ -18,7 +18,7 @@ function split_method(string) {
 }
 console.log(split_method("Goc/San/Deal")) //Out put : GOC SAN DEAL ['Goc','San','Deal']
 //===============================================================================
-//4. incluse (Nó giống if "string" in list hoặc string ở python)
+//4. include (Nó giống if "string" in list hoặc string ở python)
 // case 1 - check if "string" has in list
 my_list = ["Goc","San","Deal"]
 keyword_to_check = "San"

@@ -3,24 +3,28 @@ I: With CSS SELECTOR
 A. 1 SỐ KIẾN THỨC CẦN NẮM
 GỒM NHỮNG CÁCH GET NÀO
 1. getElementBy
-document.getElementById('Id') //Không cần # trước Id & nhớ là element số ít
-document.getElementsByClassName('Classname') //Không cần . trước classname & nhớ là elements số nhiều
-document.getElementsByClassName('Classname') //Không cần . trước classname & nhớ là elements số nhiều
+document.getElementById('Id')
+ví dụ :
+var title = document.getElementById('testid-123')
+document.getElementsByClassName('Classname') 
+ví dụ :
+var title = document.getElementsByClassName('testclassname-123')
 => Còn lại Name , Tag name y chang Class name (cũng là elements số nhiều)
 => Cách này học cho biết thôi nhưng lấy bằng CSS Selector quan trọng hơn nên sẽ ghi rõ hơn ở dưới
 ------------------------- 
 2. CSS Selector
 --------GỒM NHỮNG CÁCH GET NÀO--------
 document.querySelector('') // Lấy chỉ 1 element đầu tiên hợp lệ
-document.querySelector('') // Lấy nguyên list có các element hợp lệ
+document.querySelectorAll('') // Lấy nguyên list có các element hợp lệ
 -------GET LÀ GET NHỮNG GÌ---------
 1. ID
 document.querySelector("#id") //Nhớ là nếu lấy id thì điền # trước id
 2. Class
-document.querySelector("#class") //Nhớ là nếu lấy id thì điền # trước id
+document.querySelector(".class") //Nhớ là nếu lấy classname thì trước classname điền dấu .
 => Để ý class mà có trong trẳng ở trong thẻ thì xoả dấu space đó đổi thành lại dấu . 
 ví dụ : 
 class="div1 div2 div3" => đổi thành .div1.div2.div3
+var testClass = document.querySelector(".div1.div2.div3")
 3. tagname
 document.querySelector("tagname") //Lấy là lấy mấy thẻ div , p , span rồi kết hợp với class hay child element đồ cho chính xác
 4. Attribute
@@ -54,5 +58,3 @@ B = A.querySelector(".class2")
  - check box & radio box thì dùng .click()
  - lấy element bằng attribute thì lấy rẻ tagname sau đó thuộc tính (cùng hàng của thẻ tagname đó) // ví dụ document.querySelector('h1[class="abc"]') trong đó h1 và class nằm trùng trên 1 hàng
  - còn lấy child tức là lấy thẻ lớn > thẻ bé (không nằm cùng hàng mà đi từ ngoài vào trong) // ví dụ document.querySelector('.title1 > .title2') trong đó class title1 và class title2 nằm khác hàng
- 
-

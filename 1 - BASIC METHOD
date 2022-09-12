@@ -10,7 +10,8 @@ let = true hoặc false hoặc bất cứ ɡɪᴀ́trị có thể sau đổi
 A2 IN GIÁ TRỊ :
 console.log("hello world!")
 A3 CHẠY CODE TRÊN CMD 
-- Bước 1: lưu file dưới dạng đuôi .js (tất nhiên máy phải cài sẵn nodejs)
+- Bước 1: lưu file dưới dạng đuôi .js (tất nhiên máy phải cài sẵn nodejs) 
+Link cài : https://nodejs.org/en/
 - Bước 2 : mở cmd lên và gõ "node tên_file.js"  
 =======================================
 B - TOÁN TỬ
@@ -22,16 +23,16 @@ $$ : and
 <= : giống python
 =======================================
 C. FUNCTION
-example1
+cách 1
 // function sayname(daylaname) {
 // 	console.log(`tôi tên là ${daylaname}`)
 // }
 // sayname("nghia dep trai")
-example2
-// function sayname(daylaname) {
-// 	return `{daylaname} dep trai qua`
-// }
-// console.log(sayname("nghia dep trai"))
+cách 2
+const sayHello = function() {
+     console.log("Hello World");
+}
+sayHello()
 =========================
 D. IF,FOR,WHILE
 D.1 IF ELSE

@@ -1,38 +1,83 @@
-// =======================MỘT SỐ LIST METHOD CẦN NẮM TRONG JAV SCRIPT====================================
+CÁC KHÁI NIỆM CƠ BẢN TRONG JS
 
-//1. SORT (GIỐNG HÀM SORT BÊN PYTHON)
-// SORT TỪ BÉ ĐẾN LỚN
-mylist = [1,4,2,3]
-console.log(mylist.sort((a,b) => a - b)) //Out put : [ 1, 2, 3, 4 ]
-// ------------
-// SORT TỪ LỚN ĐẾN BÉ
-mylist = [1,4,2,3]
-console.log(mylist.sort((a,b) => b - a)) //Out put : [ 4, 3, 2, 1 ]
-//===============================================================================
-//2. REVERSE (ĐẢO NGƯỢC - GIỐNG HÀM REVERSE BÊN PYTHON)
-mylist = ["GOC","SAN","DEAL"]
-console.log(mylist.reverse()) // Out put : [ 'DEAL', 'SAN', 'GOC' ]
-//===============================================================================
-//3. POP (XOÁ PHẦN TỬ CUỐI CỦA LIST - GIỐNG POP BÊN PYTHON)
-mylist = ["GOC","SAN","DEAL"]
-mylist.pop()
-console.log(mylist) //OUT PUT : [ 'GOC', 'SAN' ]
-//4. PUSH (GIỐNG APPEND BÊN PYTHON)
+A. BIẾN & IN GIÁ TRỊ & CHẠY CODE
+A1 BIẾN:
+const : biến cố định
+let : biến có thể thay đổi
+ví dụ : 
+const = "GIÁ TRỊ NÀY KHÔNG THỂ THAY ĐỔI XUYÊN SUỐT CODE"
+let = true hoặc false hoặc bất cứ giátrị có thể sau đổi
+A2 IN GIÁ TRỊ :
+console.log("hello world!")
+A3 CHẠY CODE TRÊN CMD 
+- Bước 1: lưu file dưới dạng đuôi .js (tất nhiên máy phải cài sẵn nodejs)
+- Bước 2 : mở cmd lên và gõ "node tên_file.js"  
+=======================================
+B - TOÁN TỬ
+== : so sánh bằng
+!= : khác
+$$ : and
+|| : or 
+>= : giống python
+<= : giống python
+=======================================
+C. FUNCTION
+example1
+// function sayname(daylaname) {
+// 	console.log(`tôi tên là ${daylaname}`)
+// }
+// sayname("nghia dep trai")
+example2
+// function sayname(daylaname) {
+// 	return `{daylaname} dep trai qua`
+// }
+// console.log(sayname("nghia dep trai"))
+=========================
+D. IF,FOR,WHILE
+D.1 IF ELSE
+let num = 10
 
-mylist = ["GOC","SAN","DEAL"]
-mylist.push("NÈ")
-console.log(mylist) //OUT PUT : [ 'GOC', 'SAN', 'DEAL', 'NÈ' ]
-
-
-
-// BONUS 1 SỐ METHOD THÊM STRONG JS
-//A. CLEAR LIST IN PYTHON (ĐÁNG LẼ CÓ HÀM CLEAR GIỐNG BÊN PYTHON NHƯNG JS KHÔNG CÓ CHO NÊN LÀM THEO NÈ)
-
-mylist = ["GOC","SAN","DEAL"]
-mylist.length = 0 ;
-console.log(mylist) //OUT PUT : []
-
-// B. REMOVE SPECIFY ELEMENT IN PYTHON (ĐÁNG LẼ CÓ HÀM CLEAR GIỐNG BÊN PYTHON NHƯNG JS KHÔNG CÓ CHO NÊN LÀM THEO NÈ)
-array=["GOC","SAN","DEAL"]
-newArray = array.filter((value)=>value!='GOC');
-console.log(newArray)
+if (num >10) {
+	console.log(`num > ${num}`)
+} else if (num == 10) {
+	console.log(`num == ${num}`)
+} else {
+	console.log(`num < ${num}`)
+}
+-----
+D.2 FOR LOOP
+example1 : for loop 0->10
+for (let i=0;i<=10;i++) {
+	if (i%2 == 0) {console.log(i)}
+}
+------
+example 2 : for loop in list
+cách 1:
+list1 = ["nghia","dep","trai"]
+for (let index = 0; index < list1.length;index ++) {
+	console.log(list1[index])
+}
+cách 2 - y chang for in bên python
+list1 = ["nghia","dep","trai"]
+for (index of list1) {
+	console.log(index)
+}
+cách 3 - giống enumerate bên python
+list1 = ["nghia","dep","trai"]
+list1.forEach( function(element, index) {
+	console.log(element,index)
+});
+--------
+D.3 WHILE
+let i = 1
+checkCondition = true
+while (checkCondition) {
+	if (i >100) {
+	checkCondition = false //(hoặc ngay này break cũng đc)	
+	}
+	else {
+		console.log(i)
+		i++
+	}
+}
+=> dùng break như bình thường

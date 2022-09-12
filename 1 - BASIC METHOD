@@ -6,7 +6,7 @@ const : biến cố định
 let : biến có thể thay đổi
 ví dụ : 
 const = "GIÁ TRỊ NÀY KHÔNG THỂ THAY ĐỔI XUYÊN SUỐT CODE"
-let = true hoặc false hoặc bất cứ giátrị có thể sau đổi
+let = true hoặc false hoặc bất cứ ɡɪᴀ́trị có thể sau đổi
 A2 IN GIÁ TRỊ :
 console.log("hello world!")
 A3 CHẠY CODE TRÊN CMD 

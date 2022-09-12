@@ -13,7 +13,7 @@ A3 CHẠY CODE TRÊN CMD
 - Bước 1: lưu file dưới dạng đuôi .js (tất nhiên máy phải cài sẵn nodejs) 
 Link cài : https://nodejs.org/en/
 - Bước 2 : mở cmd lên và gõ "node tên_file.js"  
-=======================================
+==========================================================================
 B - TOÁN TỬ
 == : so sánh bằng
 != : khác
@@ -21,7 +21,7 @@ $$ : and
 || : or 
 >= : giống python
 <= : giống python
-=======================================
+==========================================================================
 C. FUNCTION
 cách 1
 // function sayname(daylaname) {
@@ -33,7 +33,7 @@ const sayHello = function() {
      console.log("Hello World");
 }
 sayHello()
-=========================
+==========================================================================
 D. IF,FOR,WHILE
 D.1 IF ELSE
 let num = 10

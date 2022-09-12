@@ -18,7 +18,6 @@ mylist = ["GOC","SAN","DEAL"]
 mylist.pop()
 console.log(mylist) //OUT PUT : [ 'GOC', 'SAN' ]
 //4. PUSH (GIỐNG APPEND BÊN PYTHON)
-
 mylist = ["GOC","SAN","DEAL"]
 mylist.push("NÈ")
 console.log(mylist) //OUT PUT : [ 'GOC', 'SAN', 'DEAL', 'NÈ' ]
@@ -26,7 +25,6 @@ console.log(mylist) //OUT PUT : [ 'GOC', 'SAN', 'DEAL', 'NÈ' ]
 ==================================================================================================================================
 // BONUS 1 SỐ METHOD THÊM STRONG JS
 //A. CLEAR LIST IN PYTHON (ĐÁNG LẼ CÓ HÀM CLEAR GIỐNG BÊN PYTHON NHƯNG JS KHÔNG CÓ CHO NÊN LÀM THEO NÈ)
-
 mylist = ["GOC","SAN","DEAL"]
 mylist.length = 0 ;
 console.log(mylist) //OUT PUT : []

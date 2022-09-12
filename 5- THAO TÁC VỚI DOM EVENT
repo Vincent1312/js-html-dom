@@ -68,9 +68,12 @@ document.querySelector('input[name="input_value"]').addEventListener('input',fun
 })
 2------------ BIẾN ĐỔI CSS ------------------
 -----CÁC LOẠI CSS THÔNG DỤNG
---- lưu ý : css trong js sẽ biến đổi theo dạng quy chuẩn : ví dụ font-size đưa vào css sẽ thành -> fontSIze
+--- lưu ý : css trong js sẽ biến đổi theo dạng quy chuẩn : ví dụ font-size đưa vào css sẽ thành -> fontSize
 1. font-size : "40px" 
 ví dụ trong js : element_can_gan.style.fontSize = "40px"
+<p class="test-class123"> ĐÂY LÀ NỘI DUNG TEST</p>
+var newElement = document.querySeletor('.test-class123');
+newElement.style.fontSize = "40px";
 2. color: "red"
 3. background-color : "red"
 ví dụ trong js : element_can_gan.style.backgroundColor = "blue"

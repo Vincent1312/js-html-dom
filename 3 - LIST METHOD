@@ -23,11 +23,7 @@ mylist = ["GOC","SAN","DEAL"]
 mylist.push("NÈ")
 console.log(mylist) //OUT PUT : [ 'GOC', 'SAN', 'DEAL', 'NÈ' ]
 
-
-
-
-
-
+==================================================================================================================================
 // BONUS 1 SỐ METHOD THÊM STRONG JS
 //A. CLEAR LIST IN PYTHON (ĐÁNG LẼ CÓ HÀM CLEAR GIỐNG BÊN PYTHON NHƯNG JS KHÔNG CÓ CHO NÊN LÀM THEO NÈ)
 

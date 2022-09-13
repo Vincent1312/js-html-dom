@@ -58,3 +58,6 @@ B = A.querySelector(".class2")
  - check box & radio box thì dùng .click()
  - lấy element bằng attribute thì lấy rẻ tagname sau đó thuộc tính (cùng hàng của thẻ tagname đó) // ví dụ document.querySelector('h1[class="abc"]') trong đó h1 và class nằm trùng trên 1 hàng
  - còn lấy child tức là lấy thẻ lớn > thẻ bé (không nằm cùng hàng mà đi từ ngoài vào trong) // ví dụ document.querySelector('.title1 > .title2') trong đó class title1 và class title2 nằm khác hàng
+ - cái innerHTML dùng để tạo nguyên 1 thẻ mới luôn
+   ví dụ
+   document.querySelector('abc').innerHTML = `<button class="123">click me</button>`

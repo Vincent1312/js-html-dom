@@ -46,7 +46,9 @@ B = A.querySelector(".class2")
 .value = "new_value"
 3. Get text
 .textContent
-.innerHTML
+.innerHTML (dùng trong TH thêm nguyên cái thẻ elememet vào)
+Ví dụ :
+element_canthem.innerHTML = `<button class="123" style="margin : auto" onclick="test_function(this)">click me </button>
 .innerText
 .....
 ---------------------------------------------------

@@ -95,6 +95,8 @@ ví dụ trong js : element_can_gan.style.marginTop = "10px
 hoặc
 margin : "pxtop pxleft pxbottom px right" (ví dụ margin : "10px 0 10px 0" )
 10. padding (như margin nhưng đang tìm hiểu)
+11. lineheight 
+.style.lineHeight = "35px"; => chỉnh height text position
 ---------ÁP DỤNG VÀO CSS NHƯ THẾ NÀO?
 document.querySelector('abc').style."thuoctinh" = "something"
 ví dụ

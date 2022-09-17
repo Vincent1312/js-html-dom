@@ -136,4 +136,13 @@ ví dụ
 document.querySelector('abc').style.width = "200px" => đúng
 document.querySelector('abc').innerText.style.width = "200px" => sai
 - khi mà không set được width với height hoặc margin (nói chung position )thì NHỚ chỉnh cái display = "inline-block" => thì sẽ chỉnh đc cái width với height  hoặc margin  nha
+- this trong JS được dùng để call nguyên thẻ ra => từ đó có thể call lại các thuộc tình trong nó
+ví dụ
+<a class="class123" href="#/abc" style="color : red" onclick=test_function(this)>đây lả thẻ a</a>
+
+function test_function(value) {
+	console.log(value.text);
+}
+=> nói chung console.log(value) ra rồi muốn lấy thuộc tính nào thì lấy như bình thường
+
 

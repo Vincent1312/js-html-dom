@@ -135,5 +135,5 @@ BONUS & LƯU Ý :
 ví dụ
 document.querySelector('abc').style.width = "200px" => đúng
 document.querySelector('abc').innerText.style.width = "200px" => sai
-- khi mà không set được width với height thì NHỚ chỉnh cái display = "inline-block" => thì sẽ chỉnh đc cái width với height nha
+- khi mà không set được width với height hoặc margin (nói chung position )thì NHỚ chỉnh cái display = "inline-block" => thì sẽ chỉnh đc cái width với height  hoặc margin  nha
 

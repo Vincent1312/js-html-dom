@@ -17,7 +17,7 @@ Link cài : https://nodejs.org/en/
 B - TOÁN TỬ
 == : so sánh bằng
 != : khác
-$$ : and
+&& : and
 || : or 
 >= : giống python
 <= : giống python

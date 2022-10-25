@@ -33,8 +33,12 @@ ví dụ :
 document.querySelector("div[type='text']")
 5. child element (đọc là hiểu nó nằm theo thứ tự từ element lớn > element con trong nó ) => nhớ là child là không cùng nằm trên 1 element
 document.querySelector("thẻ_bất_kì1 > thẻ_bất_kì2") // Tức là mỗi thẻ phải cách nhau dấu space hoặc dấu " > " ()
+lưu ý : 
+- thẻ child mà có dấu > thì tức là con trực tiếp của thẻ đó (kiểu như tác động element tiếp theo)
+- thẻ child mà không có dấu > (chi có dấu space) thì nó tác động sâu vào tất cả các thẻ có child
 ví dụ : 
 document.querySelector(".input > div[type='text']")
+7. 
 BONUS : 
 Nếu dùng child để lấy mà trong đó có tận 2 thẻ child giống nhau thì : => document.querySelector(".input > span:nth-child(2)]") (này là ví dụ thôi, còn sau cứ trùng thẻ thì thêm :nth-child(2))
 6. get từng bước

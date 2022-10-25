@@ -38,12 +38,29 @@ lưu ý :
 - thẻ child mà không có dấu > (chi có dấu space) thì nó tác động sâu vào tất cả các thẻ có child
 ví dụ : 
 document.querySelector(".input > div[type='text']")
-7. 
 BONUS : 
 Nếu dùng child để lấy mà trong đó có tận 2 thẻ child giống nhau thì : => document.querySelector(".input > span:nth-child(2)]") (này là ví dụ thôi, còn sau cứ trùng thẻ thì thêm :nth-child(2))
 6. get từng bước
 A = document.querySelector(".class")
 B = A.querySelector(".class2")
+7 . element + element
+tức là lấy thẻ con ĐẦU TIÊN nằm sau thẻ trước
+ví dụ
+<div>
+    đây là box
+</div>
+<p> đấy là p1 </p>
+<p> đấy là p2 </p>
+document.querySelector("div + p") => lấy thẻ p1
+8. element ~ element
+tức là lấy all thẻ con nằm sau thẻ trước
+ví dụ
+<div>
+    đây là box
+</div>
+<p> đấy là p1 </p>
+<p> đấy là p2 </p>
+document.querySelector("div ~ p") => lấy thẻ p1 p2... luôn
 -------- SAU KHI GET XONG THÌ LÀM GÌ NỮA ? -------------------
 1. CLick
 .click()
